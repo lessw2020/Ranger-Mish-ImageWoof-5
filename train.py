@@ -39,16 +39,16 @@ def get_data(size, woof, bs, workers=None):
             .presize(size, scale=(0.35,1))
             .normalize(imagenet_stats))
 
-from radam import *
-from novograd import *
-from rangervar import *
+#from radam import *
+#from novograd import *
+#from rangervar import *
 from ranger import *
 #from ralamb import *
-from over9000 import *
-from lookahead import *
-from adams import *
-from rangernovo import *
-from rangerlars import *
+#from over9000 import *
+#from lookahead import *
+#from adams import *
+#from rangernovo import *
+#from rangerlars import *
 
 def fit_with_annealing(learn:Learner, num_epoch:int, lr:float=defaults.lr, annealing_start:float=0.7)->None:
     n = len(learn.data.train_dl)
