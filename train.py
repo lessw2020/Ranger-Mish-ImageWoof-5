@@ -73,8 +73,8 @@ def train(
         mixup: Param("Mixup", float)=0.,
         opt: Param("Optimizer (adam,rms,sgd)", str)='adam',
         arch: Param("Architecture (xresnet34, xresnet50)", str)='xresnet50',
-        #sa: Param("Self-attention", int)=0,
-        #sym: Param("Symmetry for self-attention", int)=0,
+        sa: Param("Self-attention", int)=0,
+        sym: Param("Symmetry for self-attention", int)=0,
         dump: Param("Print model; don't train", int)=0,
         lrfinder: Param("Run learning rate finder; don't train", int)=0,
         log: Param("Log file name", str)='log',
@@ -111,7 +111,7 @@ def train(
     
     log_cb = partial(CSVLogger,filename=log)
     
-    learn = (Learner(data, m(c_out=10), wd=1e-2, opt_func=opt_func,
+    learn = (Learner(data, m(c_out=10, sa=sa,sym=sym), wd=1e-2, opt_func=opt_func,
              metrics=[accuracy,top_k_accuracy],
              bn_wd=False, true_wd=True,
              loss_func = LabelSmoothingCrossEntropy(),
@@ -156,8 +156,8 @@ def main(
         mixup: Param("Mixup", float)=0.,
         opt: Param("Optimizer (adam,rms,sgd)", str)='adam',
         arch: Param("Architecture (mxresnet34, mxresnet50)", str)='mxresnet50',
-        #sa: Param("Self-attention", int)=0,
-        #sym: Param("Symmetry for self-attention", int)=0,
+        sa: Param("Self-attention", int)=0,
+        sym: Param("Symmetry for self-attention", int)=0,
         dump: Param("Print model; don't train", int)=0,
         lrfinder: Param("Run learning rate finder; don't train", int)=0,
         log: Param("Log file name", str)='log',
@@ -166,7 +166,7 @@ def main(
         ):
 
     acc = np.array(
-        [train(gpu,woof,lr,size,alpha,mom,eps,epochs,bs,mixup,opt,arch,dump,lrfinder,log,sched_type,ann_start)
+        [train(gpu,woof,lr,size,alpha,mom,eps,epochs,bs,mixup,opt,arch,sa,sym,dump,lrfinder,log,sched_type,ann_start)
                 for i in range(run)])
     
     print(acc)
