@@ -1,5 +1,5 @@
 # Ranger-Mish-ImageWoof-5
-Repo for letting users reproduce the record breaking RangerMish combo on FastAI ImageWoof dataset 5 epochs.
+Repo for letting users reproduce the new RangerMish combo on FastAI ImageWoof dataset 5 epochs.
 Contributors to this effort - FastAI board names:
 @LessW2020 / @muellerzr / @Seb / @grankin / @Redknight / @oguiza
 
