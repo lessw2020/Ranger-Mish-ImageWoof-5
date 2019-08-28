@@ -28,7 +28,7 @@ Below are the results without attention layer (--sa 0, which is default).
 
 
 
-#How to use:  
+## How to use:  
 Just launch the training script - the script references more optimizers, etc. than what is in this repro so stick with --opt ranger for the optimizer.  Here's an example:
 ![How to use](how-to-use.jpg)
 
