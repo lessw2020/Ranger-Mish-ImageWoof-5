@@ -38,4 +38,9 @@ https://github.com/fastai/imagenette
 and FastAI forum link:
 https://forums.fast.ai/t/meet-mish-new-activation-function-possible-successor-to-relu/53299
 
+## Reference Links:
+Mish activation, official links:
+Mish github - https://github.com/digantamisra98/Mish  
+Mish paper - https://arxiv.org/abs/1908.08681. 
 
+More links coming.  
