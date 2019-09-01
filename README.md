@@ -1,8 +1,14 @@
 # Ranger-Mish-ImageWoof-5
-Repo for letting users reproduce the new RangerMish combo (and now with Self Attention layer) on FastAI ImageWoof dataset 5 epochs.
+Repo for letting users reproduce the record-setting new RangerMish+Self Attention combo on FastAI Leaderboards - ImageWoof dataset 5 epochs and 20 epochs, 128px.
 
 Contributors to this effort - FastAI board names:
 @LessW2020 / @muellerzr / @Seb / @grankin / @Redknight / @oguiza
+
+
+We have established new 5 epoch and 20 epoch records using this setup.  Here's the new 20 epoch results...almost identical parameters as the record 5 epoch setup, just a tiny drop in learning rate:
+
+
+
 
 Two variations - with and without self attention.  
 Both setups set new records for 5 epoch training on ImageWoof (same day).
