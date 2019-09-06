@@ -5,7 +5,9 @@ Contributors to this effort - FastAI board names:
 @LessW2020 / @muellerzr / @Seb / @grankin / @Redknight / @oguiza
 
 
-We have established new 5 epoch and 20 epoch records using this setup.  
+We have established a total of 12 new 5 epoch and 20 epoch records using this setup.  
+
+
 
 Here's the new 20 epoch results...almost identical parameters as the record 5 epoch setup, just a tiny drop in learning rate:
 ![RangerMishAttention 20 epoch record](rm20-new-record-8452.jpg)
